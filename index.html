@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main-container">
+        <div class="game-container">
+            <div class="dealer-container hand">
+                <div class="hand-title">
+                    <h2 id="dealer-score"></h2>
+                </div>
+                <div class="cards-area" id="dealer-cards">
+                    Las cartas del dealer aparecerán aquí...
+                </div>
+            </div>
+    
+            <div class="info-container">
+                <h1 id="message" class="info-message">Bienvenido al simulador de BlackJack</h1>
+            </div>
+    
+            <div class="user-container hand">
+                <div class="hand-title">
+                    <h2 id="player-score"></h2>
+                </div>
+                <div class="cards-area" id="user-cards">
+                    <div class="empty-hand-message">Tus cartas aparecerán aquí...</div>
+                </div>
+            </div>
+    
+            <div class="controls" id="controls">
+                <div class="bets" id="bet-controls">
+                    <div class="bets-menu">
+                        <h4 id="bet-amount" class="bet-amount">
+                            5
+                        </h4>
+                        <button id="bet-decrease" class="bet-opt">-$5
+                        </button>
+                        <button id="bet-increase" class="bet-opt">+$5</button>
+                    </div>
+                    <div class="start-game game-btn" id="start-btn">
+                        Repartir cartas :D
+                    </div>
+                </div>
+                <div class="bets hidden" id="game-controls">
+                    <button id="hit-btn" class="game-opt">Pedir carta</button>
+                    <button id="stand-btn" class="game-opt">Plantarse</button>
+                </div>
+                <div class="bets hidden" id="continue-opt">
+                    <h4>
+                        Seguir jugando
+                    </h4>
+                </div>
+
+                <div class="money-status"> <!-- el saldo -->
+                    <h3 id="wallet-amount"></h3>
+                </div>
+            </div>
+        </div>
+        
+        <div id="data-container" class="data-container">
+            <h1>Cálculos probabilísticos</h1>
+            <div class="calcs">
+                <p>Las probabilidades se mostrarán cuando empiece la partida.</p>
+                <p>Haga clic en "Repartir cartas" para comenzar.</p>
+            </div>
+        </div>
+
+    </section>
+    <div class="game-over hidden" id="game-over">
+        <h1>Te has quedado sin fondos :(</h1>
+        <button id="restart-btn">Volver a jugar</button>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="odds.js"></script>
+
+</html>
